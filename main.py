@@ -8,13 +8,19 @@ load_dotenv()
 
 llm = HuggingFaceEndpoint(
     repo_id="openai/gpt-oss-120b",
-    task="text-generation"
+    task="text-generation",
+    max_new_tokens= 500
 )
 model=ChatHuggingFace(llm=llm)
 
 temp = PromptTemplate(
     template="Write a paragraph about {topic}",
-    input_variables=['topi']
+    input_variables=['topic']
 )
 
-print(temp)
+prompt = temp.invoke({'topic': 'cow'})
+
+response = model.invoke(prompt)
+print(f"Templete : {temp}\n\n")
+print(f"Prompt : {prompt}\n\n")
+print(f"Response : {response}")
