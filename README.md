@@ -56,7 +56,7 @@ fastapi dev main.py
 ## 📄 Postman Documentation
 
 You can view the full API documentation using this Postman link:
-`postman_url`
+`https://documenter.getpostman.com/view/49369352/2sB3WyJG6s`
 
 ---
 
