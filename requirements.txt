@@ -4,3 +4,5 @@ langchain
 langchain-core
 fastapi[standard]
 langchain-huggingface
+langchain-google-genai
+
