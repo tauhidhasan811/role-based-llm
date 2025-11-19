@@ -1,4 +1,6 @@
 dotenv
+fastapi
 langchain
 langchain-core
+fastapi[standard]
 langchain-huggingface
