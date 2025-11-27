@@ -19,6 +19,5 @@ async def query(user_prompt:str = Form(...),
     print(gen_model)
 
     response = gen_model.invoke(prompt)
-
-
-    return response
+    print(response.content)
+    return response.content
