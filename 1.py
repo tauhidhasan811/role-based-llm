@@ -6,6 +6,7 @@ from component.core.gemini_model import model
 load_dotenv()
 user_role = input('Enter the role of the system: ')
 user_prompt = input('Ask your question: ')
+#asking for user role and prompt
 prompt = prompt_generate(user_prompt=user_prompt, user_role=user_role)
 #print(prompt)
 #hug_model = model()
