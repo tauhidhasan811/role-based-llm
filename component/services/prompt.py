@@ -15,8 +15,8 @@ def prompt_generate(user_prompt, user_role):
         template="{system_message}  {user_role}. Provide accurate and concise information related to the user Query: {human_message} based on the role.",
         input_variables=['system_message', 'human_message', 'user_role'] 
         )
-    prompt = temp.invoke(input={'system_message': systemMessage, 
-                                'human_message': humanMessage,
+    prompt = temp.invoke(input={'system_message': systemMessage.content, 
+                                'human_message': humanMessage.content,
                                 'user_role': user_role})
     
     return prompt

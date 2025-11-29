@@ -1,6 +1,7 @@
 dotenv
 fastapi
 langchain
+pymongo[srv]
 langchain-core
 fastapi[standard]
 langchain-huggingface
