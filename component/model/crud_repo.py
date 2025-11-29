@@ -13,9 +13,9 @@ def insert(data, cl_name):
     print(id)
     return id
 
-def get_all(cl_name):
+def get_all(cl_name, chat_id):
     dbname = get_dbconnection()
-    collection_name = dbname[cl_name]
-    response = collection_name.find()
-    response = json.loads(json_util.dumps(response))
-    return response
+    collection = dbname[cl_name]
+    cursor = collection.find({"chat_id": chat_id})
+    data = json.loads(json_util.dumps(cursor))
+    return data

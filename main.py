@@ -43,9 +43,7 @@ async def query(user_prompt:str = Form(...),
 
 @app.post("/api/chat/")
 async def get_chat_history(chat_id: int = Form(...)):
-    try: 
+    
         chats = GetAllChat(chat_id=chat_id)
         return chats
-    except Exception as ex:
-        message = {"error": ex}
-        return message
+   
