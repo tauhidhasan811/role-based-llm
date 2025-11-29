@@ -1,4 +1,5 @@
 dotenv
+certifi
 fastapi
 langchain
 pymongo[srv]
